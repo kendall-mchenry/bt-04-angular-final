@@ -11,7 +11,7 @@
     <p>
       {{ product.itemName }} | <span>{{ product.price }}</span>
     </p>
-    <button [routerLink]="">View</button>
+    <button [routerLink]="['/products', product.id]">View</button>
     <button [routerLink]="">Edit</button>
     <button [routerLink]="">Delete</button>
   </div>

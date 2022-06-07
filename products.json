@@ -6,7 +6,7 @@
       "description": "product description",
       "price": 1.11,
       "imageUrl": "https://source.unsplash.com/random",
-      "outOfStock": false
+      "inStock": false
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "description": "product description 2",
       "price": 2.22,
       "imageUrl": "https://source.unsplash.com/random",
-      "outOfStock": false
+      "inStock": false
     },
     {
       "id": 3,
@@ -22,14 +22,14 @@
       "description": "product description 3",
       "price": 3.33,
       "imageUrl": "https://source.unsplash.com/random",
-      "outOfStock": true
+      "inStock": true
     },
     {
       "itemName": "product 4",
       "description": "product description 4",
       "price": 4.44,
       "imageUrl": "https://source.unsplash.com/random",
-      "outOfStock": true,
+      "inStock": true,
       "id": 4
     }
   ]

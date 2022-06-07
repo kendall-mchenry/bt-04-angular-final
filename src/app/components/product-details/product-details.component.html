@@ -1,0 +1,13 @@
+<div>
+  <img src="{{ viewProduct.imageUrl }}" alt="{{ viewProduct.itemName }}" />
+  <h1>{{ viewProduct.itemName }}</h1>
+  <p>{{ viewProduct.price }}</p>
+  <p *ngIf="viewProduct.inStock">Item is in stock</p>
+  <p *ngIf="!viewProduct.inStock">Item is out of stock!</p>
+  <p>{{ viewProduct.description }}</p>
+  <div>
+    <button [routerLink]="['/products']">Back</button>
+    <button [routerLink]="">Edit</button>
+    <button [routerLink]="">Delete</button>
+  </div>
+</div>

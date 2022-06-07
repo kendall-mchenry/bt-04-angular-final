@@ -4,7 +4,11 @@
   <div>
     <div *ngFor="let product of productList.slice(0, 3)">
       {{ product.itemName }}
-      <img src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
+      <img
+        src="{{ product.imageUrl }}"
+        alt="{{ product.itemName }}"
+        [routerLink]="['/products', product.id]"
+      />
     </div>
   </div>
 </div>

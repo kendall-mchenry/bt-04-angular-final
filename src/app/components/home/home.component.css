@@ -1,6 +1,7 @@
 img {
     display: inline;
     width: 100px;
+    cursor: pointer;
 }
 
 h1 {

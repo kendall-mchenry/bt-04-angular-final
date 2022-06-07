@@ -9,7 +9,7 @@ export class Product {
   itemInfo?: string = '';
 
   // Default in-stock to be true (that means false would be out of stock)
-  outOfStock: boolean = false;
+  inStock: boolean = true;
 
   // Inventory count
   inventory?: number = 0;
