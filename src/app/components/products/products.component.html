@@ -1,0 +1,18 @@
+<div>
+  <div>
+    <h1>
+      High quality outdoor and adventure gear for you and your canine companion
+    </h1>
+    <button [routerLink]="">Add New Product</button>
+  </div>
+
+  <div *ngFor="let product of productList" class="product-card">
+    <img src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
+    <p>
+      {{ product.itemName }} | <span>{{ product.price }}</span>
+    </p>
+    <button [routerLink]="">View</button>
+    <button [routerLink]="">Edit</button>
+    <button [routerLink]="">Delete</button>
+  </div>
+</div>
