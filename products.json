@@ -3,9 +3,11 @@
     {
       "id": 1,
       "itemName": "product 1",
-      "description": "product description",
+      "description": "product description 1",
       "price": 1.11,
+      "itemDurability": "light",
       "imageUrl": "https://source.unsplash.com/random",
+      "inventoryCount": 0,
       "inStock": false
     },
     {
@@ -13,7 +15,9 @@
       "itemName": "product 2",
       "description": "product description 2",
       "price": 2.22,
+      "itemDurability": "light",
       "imageUrl": "https://source.unsplash.com/random",
+      "inventoryCount": 0,
       "inStock": false
     },
     {
@@ -21,16 +25,40 @@
       "itemName": "product 3",
       "description": "product description 3",
       "price": 3.33,
+      "itemDurability": "light",
       "imageUrl": "https://source.unsplash.com/random",
+      "inventoryCount": 2,
       "inStock": true
     },
     {
       "itemName": "product 4",
       "description": "product description 4",
       "price": 4.44,
+      "itemDurability": "tough",
       "imageUrl": "https://source.unsplash.com/random",
+      "inventoryCount": 4,
       "inStock": true,
       "id": 4
+    },
+    {
+      "id": 5,
+      "itemName": "TEST",
+      "description": "TESTING",
+      "price": 5.55,
+      "imageUrl": "https://source.unsplash.com/random",
+      "itemDurability": "tough",
+      "inStock": false,
+      "inventoryCount": 0
+    },
+    {
+      "id": 6,
+      "itemName": "test",
+      "description": "test",
+      "price": 7.77,
+      "imageUrl": "https://source.unsplash.com/random",
+      "itemDurability": "medium",
+      "inStock": true,
+      "inventoryCount": 2
     }
   ]
 }

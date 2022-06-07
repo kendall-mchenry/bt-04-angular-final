@@ -15,7 +15,32 @@ export class CreateProductComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // Add some error handling so the form can't be submitted without all details filled out
   onCreateSubmit() {
     console.log('submitted');
+    this.productService
+      .createNewProduct(this.newProduct)
+      .subscribe((response) => {
+        console.log(response);
+        this.router.navigateByUrl('/products');
+      });
+  }
+
+  increaseInventoryCount(): number {
+    if (this.newProduct.inventoryCount > 0) {
+      this.newProduct.inStock = true;
+    }
+    return this.newProduct.inventoryCount++;
+  }
+
+  decreaseInventoryCount(): number {
+    if (this.newProduct.inventoryCount <= 0) {
+      alert('Inventory count cannot be less than 0.');
+      this.newProduct.inStock = false;
+      return this.newProduct.inventoryCount;
+    } else {
+      this.newProduct.inStock = true;
+      return this.newProduct.inventoryCount--;
+    }
   }
 }

@@ -6,11 +6,15 @@ export class Product {
   imageUrl: string = '';
 
   // This could be other info used as a dropdown for color/size/etc.
-  itemInfo?: string = '';
+  // itemColor?: string = '';
+  // itemSize?: string = '';
+
+  // Drop down to select level of durability (light, medium, tough)
+  itemDurability: string = '';
 
   // Default in-stock to be true (that means false would be out of stock)
   inStock: boolean = true;
 
   // Inventory count
-  inventory?: number = 0;
+  inventoryCount: number = 1;
 }
