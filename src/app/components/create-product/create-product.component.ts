@@ -30,19 +30,28 @@ export class CreateProductComponent implements OnInit {
   }
 
   increaseInventoryCount(): number {
+    let currentCount: number = this.newProduct.inventoryCount++;
+
     if (this.newProduct.inventoryCount > 0) {
       this.newProduct.inStock = true;
+      console.log(this.newProduct.inventoryCount);
+      console.log(this.newProduct.inStock);
     }
-    return this.newProduct.inventoryCount++;
+    return currentCount;
   }
 
   decreaseInventoryCount(): number {
+    // gotta figure out how to make the number reflect accurately when adding a new product
+    let currentCount: number = this.newProduct.inventoryCount--;
+
     if (this.newProduct.inventoryCount <= 0) {
       alert('Inventory count cannot be less than 0.');
       this.newProduct.inStock = false;
+      console.log(this.newProduct.inStock);
       return this.newProduct.inventoryCount;
     } else {
       this.newProduct.inStock = true;
+      console.log(this.newProduct.inStock);
       return this.newProduct.inventoryCount--;
     }
   }

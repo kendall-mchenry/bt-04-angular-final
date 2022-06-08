@@ -13,8 +13,8 @@ export class Product {
   itemDurability: string = '';
 
   // Default in-stock to be true (that means false would be out of stock)
-  inStock: boolean = true;
+  inStock: boolean = false;
 
   // Inventory count
-  inventoryCount: number = 1;
+  inventoryCount: number = 0;
 }
