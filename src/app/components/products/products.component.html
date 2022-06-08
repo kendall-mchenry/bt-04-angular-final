@@ -9,7 +9,7 @@
   <div *ngFor="let product of productList" class="product-card">
     <img src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
     <p>
-      {{ product.itemName }} | <span>{{ product.price }}</span>
+      {{ product.itemName }} | <span>${{ product.price }}</span>
     </p>
     <button [routerLink]="['/products', product.id]">View</button>
     <button [routerLink]="">Edit</button>

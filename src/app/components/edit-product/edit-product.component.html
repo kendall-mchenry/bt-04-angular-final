@@ -1,1 +1,53 @@
-<p>edit-product works!</p>
+<!-- <div>
+  <h1>Create New Store Product</h1>
+  <form #form="ngForm" (ngSubmit)="onCreateSubmit()">
+    <div>
+      <label>Product Name</label>
+      <input type="text" name="name" [(ngModel)]="newProduct.itemName" />
+    </div>
+
+    <div>
+      <label>Description</label>
+      <textarea
+        type="text"
+        name="description"
+        cols="30"
+        rows="10"
+        [(ngModel)]="newProduct.description"
+      ></textarea>
+    </div>
+
+    <div>
+      <label>Price</label>
+      <input type="number" name="price" [(ngModel)]="newProduct.price" />
+    </div>
+
+    <div>
+      <label>Image URL</label>
+      <input type="text" name="image" [(ngModel)]="newProduct.imageUrl" />
+    </div>
+
+    <div>
+      <label>Item Durability</label>
+      <select
+        name="durability"
+        id="durability"
+        [(ngModel)]="newProduct.itemDurability"
+      >
+        <option value="Light" name="Light">Light</option>
+        <option value="Medium" name="Medium">Medium</option>
+        <option value="Tough" name="Tough">Tough</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Inventory</label>
+      <button type="button" (click)="increaseInventoryCount()">+</button>
+      <p name="inventory" [(ngModel)]="newProduct.inventoryCount">
+        {{ newProduct.inventoryCount }}
+      </p>
+      <button type="button" (click)="decreaseInventoryCount()">-</button>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div> -->

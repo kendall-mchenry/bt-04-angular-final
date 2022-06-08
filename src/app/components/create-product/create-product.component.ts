@@ -23,6 +23,9 @@ export class CreateProductComponent implements OnInit {
       .subscribe((response) => {
         console.log(response);
         this.router.navigateByUrl('/products');
+        alert(
+          `${this.newProduct.itemName} has been added to the product list.`
+        );
       });
   }
 
