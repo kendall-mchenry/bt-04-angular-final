@@ -9,6 +9,9 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./edit-product.component.css'],
 })
 export class EditProductComponent implements OnInit {
+
+  editOptions: string[] = ['Light', 'Medium', 'Tough'];
+
   editProduct: Product = new Product();
 
   editId: number = 0;
@@ -33,7 +36,43 @@ export class EditProductComponent implements OnInit {
       .editProductById(this.editId, this.editProduct)
       .subscribe((editedProduct) => {
         console.log(editedProduct);
-        this.router.navigateByUrl(`/products/${this.editId}`);
+        // alert(`${editedProduct.itemName} has been updated!`);
+        this.router.navigateByUrl(`/products`);
       });
+  }
+
+  // Not sure if this is the right way to do it, will revisit later if possible. But it works for now?
+  increaseInventoryCount(): number {
+    this.editProduct.inventoryCount++;
+
+    if (this.editProduct.inventoryCount > 0) {
+      this.editProduct.inStock = true;
+      console.log(this.editProduct.inventoryCount);
+      console.log(this.editProduct.inStock);
+    }
+    return this.editProduct.inventoryCount;
+  }
+
+  decreaseInventoryCount(): number {
+    this.editProduct.inventoryCount--;
+
+    if (this.editProduct.inventoryCount > 0) {
+      this.editProduct.inStock = true;
+      console.log(this.editProduct.inventoryCount);
+      console.log(this.editProduct.inStock);
+      return this.editProduct.inventoryCount;
+    } else if (this.editProduct.inventoryCount == 0) {
+      this.editProduct.inStock = false;
+      console.log(this.editProduct.inventoryCount);
+      console.log(this.editProduct.inStock);
+      return this.editProduct.inventoryCount;
+    } else if (this.editProduct.inventoryCount < 0) {
+      alert('Inventory count cannot be less than 0.');
+      this.editProduct.inStock = false;
+      console.log(this.editProduct.inStock);
+      return this.editProduct.inventoryCount++;
+    } else {
+      return this.editProduct.inventoryCount;
+    }
   }
 }

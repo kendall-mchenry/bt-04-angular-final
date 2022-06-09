@@ -34,9 +34,9 @@
         id="durability"
         [(ngModel)]="newProduct.itemDurability"
       >
-        <option value="Light" name="Light">Light</option>
-        <option value="Medium" name="Medium">Medium</option>
-        <option value="Tough" name="Tough">Tough</option>
+        <option *ngFor="let opt of createOptions" value="{{opt}}">{{opt}}</option>
+        <!-- <option value="Medium" name="Medium">Medium</option>
+        <option value="Tough" name="Tough">Tough</option> -->
       </select>
     </div>
 

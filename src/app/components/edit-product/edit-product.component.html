@@ -1,9 +1,9 @@
-<!-- <div>
-  <h1>Create New Store Product</h1>
-  <form #form="ngForm" (ngSubmit)="onCreateSubmit()">
+<div>
+  <h1>Edit {{editProduct.itemName}}</h1>
+  <form #form="ngForm" (ngSubmit)="onEditSubmit()">
     <div>
       <label>Product Name</label>
-      <input type="text" name="name" [(ngModel)]="newProduct.itemName" />
+      <input type="text" name="name" [(ngModel)]="editProduct.itemName" />
     </div>
 
     <div>
@@ -13,18 +13,18 @@
         name="description"
         cols="30"
         rows="10"
-        [(ngModel)]="newProduct.description"
+        [(ngModel)]="editProduct.description"
       ></textarea>
     </div>
 
     <div>
       <label>Price</label>
-      <input type="number" name="price" [(ngModel)]="newProduct.price" />
+      <input type="number" name="price" [(ngModel)]="editProduct.price" />
     </div>
 
     <div>
       <label>Image URL</label>
-      <input type="text" name="image" [(ngModel)]="newProduct.imageUrl" />
+      <input type="text" name="image" [(ngModel)]="editProduct.imageUrl" />
     </div>
 
     <div>
@@ -32,22 +32,22 @@
       <select
         name="durability"
         id="durability"
-        [(ngModel)]="newProduct.itemDurability"
+        [(ngModel)]="editProduct.itemDurability"
       >
-        <option value="Light" name="Light">Light</option>
-        <option value="Medium" name="Medium">Medium</option>
-        <option value="Tough" name="Tough">Tough</option>
+        <option *ngFor="let opt of editOptions" value="{{opt}}" >{{opt}}</option>
+        <!-- <option  value="Medium" name="Medium" >Medium</option>
+        <option value="Tough" name="Tough" >Tough</option> -->
       </select>
     </div>
 
     <div>
       <label>Inventory</label>
       <button type="button" (click)="increaseInventoryCount()">+</button>
-      <p name="inventory" [(ngModel)]="newProduct.inventoryCount">
-        {{ newProduct.inventoryCount }}
+      <p name="inventory" [(ngModel)]="editProduct.inventoryCount">
+        {{ editProduct.inventoryCount }}
       </p>
       <button type="button" (click)="decreaseInventoryCount()">-</button>
     </div>
     <button type="submit">Submit</button>
   </form>
-</div> -->
+</div>

@@ -9,6 +9,9 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./create-product.component.css'],
 })
 export class CreateProductComponent implements OnInit {
+
+  createOptions: string[] = ['Light', 'Medium', 'Tough'];
+
   newProduct: Product = new Product();
 
   constructor(private productService: ProductService, private router: Router) {}
@@ -16,6 +19,7 @@ export class CreateProductComponent implements OnInit {
   ngOnInit(): void {}
 
   // Add some error handling so the form can't be submitted without all details filled out
+
   onCreateSubmit() {
     console.log('submitted');
     this.productService
@@ -29,30 +33,38 @@ export class CreateProductComponent implements OnInit {
       });
   }
 
+  // Not sure if this is the right way to do it, will revisit later if possible. But it works for now?
   increaseInventoryCount(): number {
-    let currentCount: number = this.newProduct.inventoryCount++;
+    this.newProduct.inventoryCount++;
 
     if (this.newProduct.inventoryCount > 0) {
       this.newProduct.inStock = true;
       console.log(this.newProduct.inventoryCount);
       console.log(this.newProduct.inStock);
     }
-    return currentCount;
+    return this.newProduct.inventoryCount;
   }
 
   decreaseInventoryCount(): number {
-    // gotta figure out how to make the number reflect accurately when adding a new product
-    let currentCount: number = this.newProduct.inventoryCount--;
+    this.newProduct.inventoryCount--;
 
-    if (this.newProduct.inventoryCount <= 0) {
+    if (this.newProduct.inventoryCount > 0) {
+      this.newProduct.inStock = true;
+      console.log(this.newProduct.inventoryCount);
+      console.log(this.newProduct.inStock);
+      return this.newProduct.inventoryCount;
+    } else if (this.newProduct.inventoryCount == 0) {
+      this.newProduct.inStock = false;
+      console.log(this.newProduct.inventoryCount);
+      console.log(this.newProduct.inStock);
+      return this.newProduct.inventoryCount;
+    } else if (this.newProduct.inventoryCount < 0) {
       alert('Inventory count cannot be less than 0.');
       this.newProduct.inStock = false;
       console.log(this.newProduct.inStock);
-      return this.newProduct.inventoryCount;
+      return this.newProduct.inventoryCount++;
     } else {
-      this.newProduct.inStock = true;
-      console.log(this.newProduct.inStock);
-      return this.newProduct.inventoryCount--;
+      return this.newProduct.inventoryCount;
     }
   }
 }
