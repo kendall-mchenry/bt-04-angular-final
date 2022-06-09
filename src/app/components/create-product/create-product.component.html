@@ -43,11 +43,13 @@
     <div>
       <label>Inventory</label>
       <button type="button" (click)="increaseInventoryCount()">+</button>
-      <p name="inventory" [(ngModel)]="newProduct.inventoryCount">
+      <p class="inv-display" name="inventory" [(ngModel)]="newProduct.inventoryCount">
         {{ newProduct.inventoryCount }}
       </p>
       <button type="button" (click)="decreaseInventoryCount()">-</button>
     </div>
+    <button [routerLink]="['/products']">Back</button>
+
     <button type="submit">Submit</button>
   </form>
 </div>
