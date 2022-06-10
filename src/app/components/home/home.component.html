@@ -1,7 +1,4 @@
-<div>
-  <img src="../../../assets/kk-logo-2.png" alt="Kendall & Koda Logo" />
-  <h1>K&K Adventure Gear</h1>
-  <div>
+<div class="div-wrapper">
     <div *ngFor="let product of productList.slice(0, 3)">
       {{ product.itemName }}
       <img
@@ -10,5 +7,4 @@
         [routerLink]="['/products', product.id]"
       />
     </div>
-  </div>
 </div>

@@ -36,19 +36,19 @@
       "price": 4.44,
       "itemDurability": "Light",
       "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 4,
-      "inStock": true,
+      "inventoryCount": 0,
+      "inStock": false,
       "id": 4
     },
     {
       "id": 5,
       "itemName": "TEST 5",
-      "description": "TEST 5 - tough",
+      "description": "TEST description 5 - tough",
       "price": 5.55,
-      "imageUrl": "https://source.unsplash.com/random",
       "itemDurability": "Tough",
-      "inStock": true,
-      "inventoryCount": 5
+      "imageUrl": "https://source.unsplash.com/random",
+      "inventoryCount": 55,
+      "inStock": true
     }
   ]
 }

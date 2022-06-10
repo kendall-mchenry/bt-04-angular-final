@@ -1,4 +1,5 @@
-<div>
+<div class="div-wrapper">
+
   <img src="{{ viewProduct.imageUrl }}" alt="{{ viewProduct.itemName }}" />
   <h1>{{ viewProduct.itemName }}</h1>
   <p>Price: ${{ viewProduct.price }}</p>
@@ -12,5 +13,6 @@
   <div>
     <button [routerLink]="['/products']">Back</button>
     <button [routerLink]="['/edit', viewProduct.id]">Edit</button>
+    <button (click)="onItemDelete(viewProduct.id)">Delete</button>
   </div>
 </div>

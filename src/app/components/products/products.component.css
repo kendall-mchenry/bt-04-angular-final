@@ -10,3 +10,13 @@ img {
     text-align: center;
 
 }
+
+.card-wrapper {
+}
+
+.example-card {
+    max-width: 30%;
+    padding: 20px;
+    margin: 20px;
+  }
+  

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -14,7 +14,7 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private productService: ProductService,
-    private actRoute: ActivatedRoute
+    private actRoute: ActivatedRoute, private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -23,4 +23,21 @@ export class ProductDetailsComponent implements OnInit {
       .getProductByID(this.selectedId)
       .subscribe((selectedProduct) => (this.viewProduct = selectedProduct));
   }
+
+  onItemDelete(productId: number) {
+    let deleteProduct = new Product;
+    this.productService.getProductByID(productId).subscribe(findProduct => {
+      deleteProduct = findProduct;
+    })
+
+    this.productService.deleteProductById(productId).subscribe(deletedProduct => {
+      console.log(deletedProduct);
+      this.router.navigateByUrl('/products');
+
+      // Add name of which item was deleted (subscribe to service again to get item info by id?)
+      alert(`${deleteProduct.itemName} has been deleted.`);
+    })
+  }
+
+  
 }

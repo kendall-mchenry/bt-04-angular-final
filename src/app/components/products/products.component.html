@@ -1,18 +1,76 @@
-<div>
+<div class="div-wrapper">
+  <br>
   <div>
+    <div>
+      <form #form="ngForm" (ngSubmit)="onSearchSubmit()">
+        <input type="text" name="search" [(ngModel)]="searchTerm" placeholder="Search Products..."/>
+        <button type="submit">Search</button>
+      </form>
+
+    </div>
+
+    <div>
+      <!-- <form #form="ngForm" (ngSubmit)="onSearchSubmit()">
+        <input type="text" name="search" [(ngModel)]="searchTerm" placeholder="Search Products..."/>
+        <button type="submit">Search</button>
+      </form> -->
+<!-- <form #form="ngForm">
+    <label>Sort by...</label>
+    <select
+      name="sort"
+      id="sort"
+      ngModel
+      >
+        <option selected="selected" value="default">Sort by...</option>
+        <option (click)="clickSortByNameAsc()">Sort by Name (Ascending)</option>
+        <option (click)="clickSortByNameDesc()">Sort by Name (Descending)</option>
+    </select>  
+</form> -->
+
+    <label>Sort: </label>
+    <button (click)="clickSortByNameDesc()">Name</button>
+    <button (click)="clickSortByPriceAsc()">Price</button>
+    <button (click)="showInStock()">In Stock</button>
+    <button (click)="showNotInStock()">Out of Stock</button>
+
+    <!-- Add durability sort/filter? -->
+
+  </div>
+
+  <!-- <form>
+    <input type="checkbox" id="in-stock" name="in-stock" value="in-stock" >
+    <label for="in-stock">In Stock</label><br>
+  </form> -->
+  
+  
     <h1>
       High quality outdoor and adventure gear for you and your canine companion
     </h1>
     <button [routerLink]="['/add']">Add New Product</button>
   </div>
 
-  <div *ngFor="let product of productList" class="product-card">
-    <img src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
-    <p>
-      {{ product.itemName }} | <span>${{ product.price }}</span>
-    </p>
-    <button [routerLink]="['/products', product.id]">View</button>
-    <button [routerLink]="['/edit', product.id]">Edit</button>
-    <button (click)="onItemDelete(product.id)">Delete</button>
+  <div class="card-wrapper">
+
+  <mat-card *ngFor="let product of productList" class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{ product.itemName }}</mat-card-title>
+      <mat-card-subtitle>${{ product.price }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button [routerLink]="['/products', product.id]">View</button>
+      <button mat-button [routerLink]="['/edit', product.id]">Edit</button>
+      <button mat-button (click)="onItemDelete(product.id)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+
+  
   </div>
 </div>

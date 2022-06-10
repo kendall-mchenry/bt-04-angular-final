@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.div-wrapper {
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #c2d8e9;
+    width: 80%;
+}
