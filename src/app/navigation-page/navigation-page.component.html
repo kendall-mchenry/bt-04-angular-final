@@ -22,6 +22,21 @@
       </button>
       <span>K&K Adventure Gear</span>
     </mat-toolbar>
-    <router-outlet></router-outlet>
+    <div id="page-container">
+      <div id="content-wrap">
+        <router-outlet></router-outlet>
+      </div>
+      <footer id="footer">
+        <mat-toolbar class="foot-div">
+          <span>
+            ©2022 K&K Adventure Gear, Inc.
+          </span>
+          <span>
+            Website created by KKMcHey Design.
+          </span>
+        </mat-toolbar>
+         
+      </footer>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

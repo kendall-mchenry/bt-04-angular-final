@@ -1,9 +1,31 @@
-img {
-    display: inline;
-    width: 100px;
-    cursor: pointer;
+.header-div {
+    text-align: center;
 }
 
-h1 {
-    display: inline;
+.logo {
+    width: 200px;
 }
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-card {
+      padding: 30px;
+      max-width: 300px;
+      margin: 20px;
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      cursor: pointer;
+    }
+  
+    .prod-img {
+      max-height: 100%;
+      max-width: 80%;
+      border-radius: 5px;
+      border: none;
+      box-shadow: lightgray 3px 3px 10px;
+    }

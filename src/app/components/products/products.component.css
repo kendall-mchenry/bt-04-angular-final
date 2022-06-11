@@ -22,6 +22,8 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 5px;
+  border: none;
+  border-radius: 20px;
 }
 
 .add-btn {
@@ -62,11 +64,9 @@
   .prod-img {
     max-height: 100%;
     max-width: 80%;
-  }
-
-  .prod-btn {
-    display: flex;
-    flex-direction: row;
+    border-radius: 5px;
+    border: none;
+    box-shadow: lightgray 3px 3px 10px;
   }
 
   .card-btn {

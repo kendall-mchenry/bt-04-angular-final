@@ -1,10 +1,20 @@
 <div class="div-wrapper">
-    <div *ngFor="let product of productList.slice(0, 3)">
-      {{ product.itemName }}
-      <img
-        src="{{ product.imageUrl }}"
-        alt="{{ product.itemName }}"
-        [routerLink]="['/products', product.id]"
-      />
+  <div class="header-div">
+    <img class="logo" src="../../../assets/kk-logo-2.png" alt="K&K kk-logo-2">
+    <h1>K&K Adventure Gear</h1>
+
+  </div>
+  <mat-divider></mat-divider><br>
+
+    <div class="card-wrapper">
+      <div *ngFor="let product of productList.slice(0, 3)" >
+        <mat-card class="product-card" [routerLink]="['/products', product.id]">
+          <mat-card-header>
+            <mat-card-title>{{ product.itemName }} </mat-card-title>
+          </mat-card-header>
+          <img class="prod-img" mat-card-image src="{{ product.imageUrl }}" alt="{{ product.itemName }}"/>
+        </mat-card>
+      </div>
     </div>
+
 </div>

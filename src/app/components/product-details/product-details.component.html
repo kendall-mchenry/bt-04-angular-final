@@ -1,18 +1,32 @@
 <div class="div-wrapper">
+  <div class="prod-wrapper">
+    <div>
+      <img class="prod-img" src="{{ viewProduct.imageUrl }}" alt="{{ viewProduct.itemName }}" />
 
-  <img src="{{ viewProduct.imageUrl }}" alt="{{ viewProduct.itemName }}" />
-  <h1>{{ viewProduct.itemName }}</h1>
-  <p>Price: {{ viewProduct.price | currency: "USD"  }}</p>
-  <p *ngIf="viewProduct.inStock">Item is in stock</p>
-  <p *ngIf="!viewProduct.inStock">Item is out of stock!</p>
-  <p>
-    Current inventory: <span>{{ viewProduct.inventoryCount }}</span>
-  </p>
-  <p>Durability Rating: {{ viewProduct.itemDurability }}</p>
-  <p>{{ viewProduct.description }}</p>
-  <div>
-    <button [routerLink]="['/products']">Back</button>
-    <button [routerLink]="['/edit', viewProduct.id]">Edit</button>
-    <button (click)="onItemDelete(viewProduct.id)">Delete</button>
+    </div>
+
+    <div class="prod-details">
+      <h1>{{ viewProduct.itemName }}</h1>
+      <mat-divider></mat-divider>
+      <br>
+      <p> <b>Price:</b> {{ viewProduct.price | currency: "USD" }}</p>
+      <!-- <p *ngIf="viewProduct.inStock">Item is in stock</p> -->
+      <p class="stock-alert" *ngIf="!viewProduct.inStock">
+        Item is out of stock!</p>
+      <p>
+        <b>Current inventory: </b> <span>{{ viewProduct.inventoryCount }}</span>
+      </p>
+      <p ><b>Durability Rating:</b> {{ viewProduct.itemDurability }}</p>
+      <mat-divider></mat-divider><br>
+      <p>{{ viewProduct.description }}</p>
+
+      <div class="prod-btns">
+        <button class="back-btn" mat-raised-button [routerLink]="['/products']">Back</button>
+        <button class="edit-btn" mat-raised-button [routerLink]="['/edit', viewProduct.id]">Edit</button>
+        <button class="delete-btn" mat-raised-button (click)="onItemDelete(viewProduct.id)">Delete</button>
+      </div>
+    </div>
+
   </div>
+
 </div>

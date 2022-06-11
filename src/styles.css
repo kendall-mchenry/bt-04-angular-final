@@ -1,29 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
 .div-wrapper {
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 5px;
-    border: none;
-    background-color: #c2d8e9;
-    width: 80%;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #c2d8e9;
+  width: 80%;
 }
 
 .edit-btn {
-    color: #2c75a9;
+  color: #2c75a9;
 }
 
-.back-btn, .view-btn {
-    color: gray;
+.back-btn,
+.view-btn {
+  color: gray;
 }
 
 .submit-btn {
-    color: #70A288;
+  color: #70a288;
 }
 
 .delete-btn {
-    color: #ab3428;
-  }
+  color: #ab3428;
+}
+
+.stock-alert {
+  background-color: rgb(226, 129, 129);
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  width: fit-content;
+  padding: 10px;
+  font-weight: bold;
+}

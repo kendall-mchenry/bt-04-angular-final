@@ -1,55 +1,58 @@
 <div class="div-wrapper">
   <h1>Edit {{editProduct.itemName}}</h1>
   <form #form="ngForm" (ngSubmit)="onEditSubmit()">
-    <div>
-      <label>Product Name</label>
-      <input type="text" name="name" [(ngModel)]="editProduct.itemName" />
-    </div>
 
-    <div>
-      <label>Description</label>
-      <textarea
-        type="text"
-        name="description"
-        cols="30"
-        rows="10"
-        [(ngModel)]="editProduct.description"
-      ></textarea>
-    </div>
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Product Name</mat-label>
+      <input type="text" name="name" [(ngModel)]="editProduct.itemName" matInput>
+    </mat-form-field>
 
-    <div>
-      <label>Price</label>
-      <input type="number" name="price" step="0.01" [(ngModel)]="editProduct.price" />
-    </div>
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>Item Description</mat-label>
+      <textarea matInput type="text" name="description" rows="5" [(ngModel)]="editProduct.description"></textarea>
+    </mat-form-field>
 
-    <div>
-      <label>Image URL</label>
-      <input type="text" name="image" [(ngModel)]="editProduct.imageUrl" />
-    </div>
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Price</mat-label>
+      <input type="number" name="price" step="0.01" [(ngModel)]="editProduct.price" matInput>
+    </mat-form-field>
 
-    <div>
-      <label>Item Durability</label>
-      <select
-        name="durability"
-        id="durability"
-        [(ngModel)]="editProduct.itemDurability"
-      >
-        <option *ngFor="let opt of editOptions" value="{{opt}}" >{{opt}}</option>
-        <!-- <option  value="Medium" name="Medium" >Medium</option>
-        <option value="Tough" name="Tough" >Tough</option> -->
-      </select>
-    </div>
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Image URL</mat-label>
+      <input type="text" name="image" [(ngModel)]="editProduct.imageUrl" matInput>
+    </mat-form-field>
 
-    <div>
-      <label>Inventory</label>
-      <button type="button" (click)="increaseInventoryCount()">+</button>
-      <p class="inv-display" name="inventory" [(ngModel)]="editProduct.inventoryCount">
-        {{ editProduct.inventoryCount }}
+    <mat-form-field appearance="outline" class="example-full-width">
+      <mat-label>Item Durability</mat-label>
+      <mat-select name="durability" id="durability" [(ngModel)]="editProduct.itemDurability">
+        <mat-option *ngFor="let opt of editOptions" value="{{opt}}">{{opt}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="inv-div">
+      <p appearance="outline">
+
+        <b>Current Inventory:</b> <span class="inv-display" name="inventory" [(ngModel)]="editProduct.inventoryCount">
+          {{ editProduct.inventoryCount }}
+        </span>
+        <br>
+
+        <button type="button" class="inv-btn" mat-mini-fab color="warn" (click)="decreaseInventoryCount()">
+          <mat-icon>arrow_downward</mat-icon>
+        </button>
+
+        <button type="button" class="inv-btn" mat-mini-fab color="warn" (click)="increaseInventoryCount()">
+          <mat-icon>arrow_upward</mat-icon>
+        </button>
+
       </p>
-      <button type="button" (click)="decreaseInventoryCount()">-</button>
     </div>
-    <button [routerLink]="['/products']" type="button">Back</button>
+    <br>
 
-    <button type="submit">Submit</button>
+    <div class="create-btns">
+      <button class="back-btn" mat-raised-button [routerLink]="['/products']">Back</button>
+      <button class="submit-btn" mat-raised-button type="submit">Submit</button>
+    </div>
+
   </form>
 </div>

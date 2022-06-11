@@ -34,7 +34,8 @@ import {MatFormFieldControl} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {matSelectAnimations, MatSelectModule} from '@angular/material/select';
 import {MatChipsModule} from '@angular/material/chips';
-
+import {MatDividerModule} from '@angular/material/divider';
+import {MatBadgeModule} from '@angular/material/badge';
 
 
 
@@ -52,7 +53,7 @@ import {MatChipsModule} from '@angular/material/chips';
     DashboardComponent,
     TableViewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, CommonModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatChipsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, CommonModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatChipsModule, MatDividerModule, MatBadgeModule],
   providers: [],
   bootstrap: [AppComponent],
 })

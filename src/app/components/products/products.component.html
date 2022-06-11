@@ -46,7 +46,7 @@
       <div class="sort-div">
         <label class="sort-element"> Sort: </label>
         <button class="sort-element" mat-raised-button (click)="showInStock()">In Stock</button>
-        <button class="sort-element" mat-raised-button (click)="showNotInStock()">Out of Stock</button>
+        <button class="sort-element" mat-raised-button (click)="showNotInStock()" matBadgeSize="large" matBadge="!" matBadgePosition="before" matBadgeColor="warn">Out of Stock</button>
       </div>
 
       <div class="filter-div">
@@ -61,8 +61,28 @@
   </div>
 
   <div class="card-wrapper">
-    <div *ngFor="let product of productList">
-      <mat-card class="product-card">
+    <div *ngFor="let product of productList" >
+      <mat-card class="product-card" *ngIf="!product.inStock" matBadgeSize="large" matBadge="!" matBadgePosition="before" matBadgeColor="warn">
+        <mat-card-header>
+          <mat-card-title>{{ product.itemName }} </mat-card-title>
+          <mat-card-subtitle>{{ product.price | currency: "USD" }} </mat-card-subtitle>
+        </mat-card-header>
+        <img class="prod-img" mat-card-image src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
+        <mat-card-content>
+          <p>
+            <b>Current Inventory:</b> {{product.inventoryCount}}
+          </p>
+          <p>
+            <b>Durability:</b> {{product.itemDurability}}
+          </p>
+        </mat-card-content>
+        <div class="prod-btn">
+          <button class="view-btn card-btn" mat-raised-button [routerLink]="['/products', product.id]">View</button>
+          <button class="edit-btn card-btn" mat-raised-button [routerLink]="['/edit', product.id]">Edit</button>
+          <button class="delete-btn card-btn" mat-raised-button (click)="onItemDelete(product.id)">Delete</button>
+        </div>
+      </mat-card>
+      <mat-card class="product-card" *ngIf="product.inStock">
         <mat-card-header>
           <mat-card-title>{{ product.itemName }} </mat-card-title>
           <mat-card-subtitle>{{ product.price | currency: "USD" }} </mat-card-subtitle>
