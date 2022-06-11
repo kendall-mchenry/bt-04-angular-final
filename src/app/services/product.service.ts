@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Product } from '../models/product';
+import { ItemDurability, Product } from '../models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -63,18 +63,26 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.dataSource}/?_sort=price&_order=desc`)
   }
 
-  // FILTER by durability
-  filterLight(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Light`);
+  filterDurability(itemDurability: ItemDurability): Observable<Product[]> {
+    return this.http.get<Product[]>(this.dataSource, {
+      params: {
+        itemDurability
+      }
+    });
   }
 
-  filterMedium(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Medium`);
-  }
+  // // FILTER by durability
+  // filterLight(): Observable<Product[]> {
+  //   return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Light`);
+  // }
 
-  filterTough(): Observable<Product[]> {
-    return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Tough`);
-  }
+  // filterMedium(): Observable<Product[]> {
+  //   return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Medium`);
+  // }
+
+  // filterTough(): Observable<Product[]> {
+  //   return this.http.get<Product[]>(`${this.dataSource}/?itemDurability=Tough`);
+  // }
   
 // Would there be a way to combo filter these? (Like, have a check box that returns the value selected by the checkbox and fills in the appropriate filtering data for the URL?)
 

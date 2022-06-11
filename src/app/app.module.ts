@@ -29,6 +29,14 @@ import { TableViewComponent } from './table-view/table-view.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatFormFieldControl} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {matSelectAnimations, MatSelectModule} from '@angular/material/select';
+import {MatChipsModule} from '@angular/material/chips';
+
+
+
 
 @NgModule({
   declarations: [
@@ -44,7 +52,7 @@ import { MatSortModule } from '@angular/material/sort';
     DashboardComponent,
     TableViewComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, CommonModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule, CommonModule, BrowserAnimationsModule, LayoutModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatGridListModule, MatCardModule, MatMenuModule, MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule, MatSelectModule, MatChipsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

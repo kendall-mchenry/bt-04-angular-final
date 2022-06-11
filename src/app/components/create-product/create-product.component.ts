@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Product } from 'src/app/models/product';
+import { ItemDurability, Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class CreateProductComponent implements OnInit {
 
-  createOptions: string[] = ['Light', 'Medium', 'Tough'];
+  createOptions: ItemDurability[] = ['Light', 'Medium', 'Tough'];
 
   newProduct: Product = new Product();
 

@@ -10,7 +10,7 @@ export class Product {
   // itemSize?: string = '';
 
   // Drop down to select level of durability (light, medium, tough)
-  itemDurability: string = '';
+  itemDurability: ItemDurability = '';
 
   // Default in-stock to be true (that means false would be out of stock)
   inStock: boolean = false;
@@ -18,3 +18,5 @@ export class Product {
   // Inventory count
   inventoryCount: number = 0;
 }
+
+export type ItemDurability = 'Light' | 'Medium' | 'Tough' | ''

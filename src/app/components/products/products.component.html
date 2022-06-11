@@ -1,76 +1,88 @@
 <div class="div-wrapper">
-  <br>
-  <div>
-    <div>
+  <h1>
+    High quality outdoor and adventure gear for you and your canine companion
+  </h1>
+  <button class="add-btn" mat-raised-button [routerLink]="['/add']">Add New Product</button>
+
+  <div class="sort-container">
+
+    <div class="search-div">
       <form #form="ngForm" (ngSubmit)="onSearchSubmit()">
-        <input type="text" name="search" [(ngModel)]="searchTerm" placeholder="Search Products..."/>
-        <button type="submit">Search</button>
+        <mat-form-field appearance="outline">
+          <mat-label>Search Products</mat-label>
+          <input type="text" name="search" [(ngModel)]="searchTerm" matInput>
+          <button type="submit" mat-icon-button mat-mini-fab matSuffix class="search-btn">
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
       </form>
+    </div>
+
+    <div class="select-sort-filter">
+
+      <div class="select-div">
+        <form #form="ngForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Sort by...</mat-label>
+            <mat-select>
+              <mat-option (click)="clickSortByNameAsc()">
+                Sort by Name (Ascending)
+              </mat-option>
+              <mat-option (click)="clickSortByNameDesc()">
+                Sort by Name (Descending)
+              </mat-option>
+              <mat-option (click)="clickSortByPriceAsc()">
+                Sort by Price (Low to High)
+              </mat-option>
+              <mat-option (click)="clickSortByPriceDesc()">
+                Sort by Price (High to Low)
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </form>
+      </div>
+
+
+      <div class="sort-div">
+        <label class="sort-element"> Sort: </label>
+        <button class="sort-element" mat-raised-button (click)="showInStock()">In Stock</button>
+        <button class="sort-element" mat-raised-button (click)="showNotInStock()">Out of Stock</button>
+      </div>
+
+      <div class="filter-div">
+        <label class="sort-element">Durability Filter:</label>
+        <button class="sort-element" mat-raised-button (click)="filterDurability('Light')">Light</button>
+        <button class="sort-element" mat-raised-button (click)="filterDurability('Medium')">Medium</button>
+        <button class="sort-element" mat-raised-button (click)="filterDurability('Tough')">Tough</button>
+      </div>
 
     </div>
 
-    <div>
-      <!-- <form #form="ngForm" (ngSubmit)="onSearchSubmit()">
-        <input type="text" name="search" [(ngModel)]="searchTerm" placeholder="Search Products..."/>
-        <button type="submit">Search</button>
-      </form> -->
-<!-- <form #form="ngForm">
-    <label>Sort by...</label>
-    <select
-      name="sort"
-      id="sort"
-      ngModel
-      >
-        <option selected="selected" value="default">Sort by...</option>
-        <option (click)="clickSortByNameAsc()">Sort by Name (Ascending)</option>
-        <option (click)="clickSortByNameDesc()">Sort by Name (Descending)</option>
-    </select>  
-</form> -->
-
-    <label>Sort: </label>
-    <button (click)="clickSortByNameDesc()">Name</button>
-    <button (click)="clickSortByPriceAsc()">Price</button>
-    <button (click)="showInStock()">In Stock</button>
-    <button (click)="showNotInStock()">Out of Stock</button>
-
-    <!-- Add durability sort/filter? -->
-
-  </div>
-
-  <!-- <form>
-    <input type="checkbox" id="in-stock" name="in-stock" value="in-stock" >
-    <label for="in-stock">In Stock</label><br>
-  </form> -->
-  
-  
-    <h1>
-      High quality outdoor and adventure gear for you and your canine companion
-    </h1>
-    <button [routerLink]="['/add']">Add New Product</button>
   </div>
 
   <div class="card-wrapper">
-
-  <mat-card *ngFor="let product of productList" class="example-card">
-    <mat-card-header>
-      <mat-card-title>{{ product.itemName }}</mat-card-title>
-      <mat-card-subtitle>${{ product.price }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
-    <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-        bred for hunting.
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-      <button mat-button [routerLink]="['/products', product.id]">View</button>
-      <button mat-button [routerLink]="['/edit', product.id]">Edit</button>
-      <button mat-button (click)="onItemDelete(product.id)">Delete</button>
-    </mat-card-actions>
-  </mat-card>
-
-  
+    <div *ngFor="let product of productList">
+      <mat-card class="product-card">
+        <mat-card-header>
+          <mat-card-title>{{ product.itemName }} </mat-card-title>
+          <mat-card-subtitle>{{ product.price | currency: "USD" }} </mat-card-subtitle>
+        </mat-card-header>
+        <img class="prod-img" mat-card-image src="{{ product.imageUrl }}" alt="{{ product.itemName }}" />
+        <mat-card-content>
+          <p>
+            <b>Current Inventory:</b> {{product.inventoryCount}}
+          </p>
+          <p>
+            <b>Durability:</b> {{product.itemDurability}}
+          </p>
+        </mat-card-content>
+        <div class="prod-btn">
+          <button class="view-btn card-btn" mat-raised-button [routerLink]="['/products', product.id]">View</button>
+          <button class="edit-btn card-btn" mat-raised-button [routerLink]="['/edit', product.id]">Edit</button>
+          <button class="delete-btn card-btn" mat-raised-button (click)="onItemDelete(product.id)">Delete</button>
+        </div>
+      </mat-card>
+    </div>
   </div>
+
 </div>

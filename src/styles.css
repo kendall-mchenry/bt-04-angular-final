@@ -11,3 +11,19 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     background-color: #c2d8e9;
     width: 80%;
 }
+
+.edit-btn {
+    color: #2c75a9;
+}
+
+.back-btn, .view-btn {
+    color: gray;
+}
+
+.submit-btn {
+    color: #70A288;
+}
+
+.delete-btn {
+    color: #ab3428;
+  }

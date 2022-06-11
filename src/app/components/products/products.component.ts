@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { Product } from 'src/app/models/product';
+import { ItemDurability, Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
+
 
 @Component({
   selector: 'app-products',
@@ -15,6 +15,8 @@ export class ProductsComponent implements OnInit {
   searchTerm: string = '';
 
   sortOptions: string[] = ['Sort by Name (Ascending)', 'Sort by Name (Descending)', 'Sort by Price (Low to High)', 'Sort by Price (High to Low)'];
+
+  selectedDurability: ItemDurability = '';
 
   constructor(private productService: ProductService, private router: Router) {}
 
@@ -44,13 +46,15 @@ export class ProductsComponent implements OnInit {
     })
   }
 
-  // Advanced JSON
+  // Advanced JSON --------------------------------------------
 
   onSearchSubmit() {
     this.productService.searchByString(this.searchTerm).subscribe(searchResults => {
       this.productList = searchResults
     });
   }
+
+  // In a future iteration, I'd like to make these sort functionalities like turn off/on when clicked.
 
   // SORTING
   clickSortByNameAsc() {
@@ -70,6 +74,12 @@ export class ProductsComponent implements OnInit {
     });
   }
 
+  clickSortByPriceDesc() {
+    this.productService.sortByPriceDesc().subscribe(sortedList => {
+      this.productList = sortedList
+    });
+  }
+
   // FILTER
   showInStock() {
     this.productService.filterInStock().subscribe(filteredList => {
@@ -80,6 +90,12 @@ export class ProductsComponent implements OnInit {
   showNotInStock() {
     this.productService.filterNotInStock().subscribe(filteredList => {
       this.productList = filteredList
+    });
+  }
+
+  filterDurability(itemDurability: ItemDurability) {
+    this.productService.filterDurability(itemDurability).subscribe(response => {
+      this.productList = response
     });
   }
 

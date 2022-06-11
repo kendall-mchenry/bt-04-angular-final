@@ -3,12 +3,12 @@
     {
       "id": 1,
       "itemName": "product 1",
-      "description": "product description 1 - light",
-      "price": 1.11,
+      "description": "Doggo ipsum super chub h*ck woofer lotsa pats such treat, very taste wow much ruin diet what a nice floof. Wow very biscit ruff most angery pupper I have ever seen very jealous pupper borkdrive long water shoob very jealous pupper, big ol pupperino fluffer you are doing me a frighten. Thicc boofers clouds vvv, lotsa pats. Doing me a frighten what a nice floof snoot long bois shoob, blep bork. ",
+      "price": 1,
       "itemDurability": "Light",
       "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 0,
-      "inStock": false
+      "inventoryCount": 1,
+      "inStock": true
     },
     {
       "id": 2,
@@ -49,6 +49,16 @@
       "imageUrl": "https://source.unsplash.com/random",
       "inventoryCount": 55,
       "inStock": true
+    },
+    {
+      "id": 6,
+      "itemName": "TEST 7",
+      "description": "TEST 7",
+      "price": 7.77,
+      "imageUrl": "https://source.unsplash.com/random",
+      "itemDurability": "Medium",
+      "inStock": true,
+      "inventoryCount": 7
     }
   ]
 }
