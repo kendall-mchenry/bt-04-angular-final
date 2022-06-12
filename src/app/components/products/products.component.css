@@ -91,11 +91,11 @@ h1 {
   }
 
   .prod-img {
-    max-height: 100%;
-    max-width: 80%;
+    max-height: 200px;
+    width: auto;
     border-radius: 5px;
     border: none;
-    box-shadow: lightgray 3px 3px 10px;
+    /* box-shadow: lightgray 3px 3px 10px; */
   }
 
   .card-btn {

@@ -12,7 +12,7 @@
       <p> <b>Price:</b> {{ viewProduct.price | currency: "USD" }}</p>
       <!-- <p *ngIf="viewProduct.inStock">Item is in stock</p> -->
       <p class="stock-alert" *ngIf="!viewProduct.inStock">
-        Item is out of stock!</p>
+        Out of stock!</p>
       <p>
         <b>Current inventory: </b> <span>{{ viewProduct.inventoryCount }}</span>
       </p>

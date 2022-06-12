@@ -2,6 +2,10 @@ h1 {
     font-family: 'Roboto Slab', serif;
   }
 
+  .div-wrapper {
+    background-color: white;
+  }
+
 .prod-wrapper {
     display: flex;
     flex-direction: row;
@@ -12,13 +16,13 @@ h1 {
 
 .prod-img {
     display: block;
-    width: 300px;
-    height: auto;
+    width: auto;
+    height: 250px;
     margin-right: 30px;
     margin-bottom: 30px;
     border-radius: 5px;
     border: none;
-    box-shadow: 3px 3px 10px;
+    /* box-shadow: 3px 3px 10px; */
 }
 
 .prod-details {
