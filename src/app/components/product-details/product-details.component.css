@@ -1,3 +1,6 @@
+h1 {
+    font-family: 'Roboto Slab', serif;
+  }
 
 .prod-wrapper {
     display: flex;

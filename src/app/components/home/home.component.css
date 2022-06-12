@@ -2,6 +2,13 @@
     text-align: center;
 }
 
+h1 {
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
 .logo {
     width: 200px;
 }

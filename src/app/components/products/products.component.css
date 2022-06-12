@@ -1,9 +1,19 @@
+h1 {
+  font-family: 'Roboto Slab', serif;
+  margin: 30px auto;
+}
+
+.prod-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
 .search-btn {
   background-color: gray;
 }
 
 .sort-container {
+  margin-top: 30px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -30,11 +40,30 @@
   grid-area: add;
   width: fit-content;
   margin-bottom: 10px;
+  background-color: #70A288;
 }
 
 .search-div {
   grid-area: search;
   justify-self: start;
+}
+
+/* .search-input {
+  background-color: white;
+} */
+
+/* .mat-form-field-flex.ng-tns-c69-1 {
+    background-color: white;
+
+} */
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  background-color: white;
+  border-radius: 5px;
+}
+
+::ng-deep .mat-form-field-flex.ng-tns-c69-2 {
+  background-color: white;
 }
 
 .select-div {

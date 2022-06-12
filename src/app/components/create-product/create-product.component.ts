@@ -9,7 +9,6 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./create-product.component.css'],
 })
 export class CreateProductComponent implements OnInit {
-
   createOptions: ItemDurability[] = ['Light', 'Medium', 'Tough'];
 
   newProduct: Product = new Product();
@@ -21,16 +20,25 @@ export class CreateProductComponent implements OnInit {
   // Add some error handling so the form can't be submitted without all details filled out
 
   onCreateSubmit() {
-    console.log('submitted');
-    this.productService
+    if (
+      this.newProduct.itemName == '' ||
+      this.newProduct.description == '' ||
+      this.newProduct.imageUrl == '' ||
+      this.newProduct.itemDurability == '' ||
+      this.newProduct.price == 0
+    ) {
+      alert(
+        'Product data is not complete. New product was not created. Please complete all fields and resubmit.'
+      );
+      this.router.navigateByUrl('/add');
+    } else {
+      this.productService
       .createNewProduct(this.newProduct)
       .subscribe((response) => {
         console.log(response);
         this.router.navigateByUrl('/products');
-        alert(
-          `${this.newProduct.itemName} has been added to the product list.`
-        );
       });
+    }
   }
 
   // Not sure if this is the right way to do it, will revisit later if possible. But it works for now?

@@ -2,63 +2,123 @@
   "products": [
     {
       "id": 1,
-      "itemName": "product 1",
-      "description": "Doggo ipsum super chub h*ck woofer lotsa pats such treat, very taste wow much ruin diet what a nice floof. Wow very biscit ruff most angery pupper I have ever seen very jealous pupper borkdrive long water shoob very jealous pupper, big ol pupperino fluffer you are doing me a frighten. Thicc boofers clouds vvv, lotsa pats. Doing me a frighten what a nice floof snoot long bois shoob, blep bork. ",
-      "price": 1,
+      "itemName": "Daily Dog Harness",
+      "description": "The Daily Harness is a padded everyday dog harness that is easy to put on and comfortable for dogs to wear. A key piece of gear for canines embarking on a life of adventure with their humans, the harness features two leash attachment options: an aluminum V-ring centered on the dog's back for everyday walks, and reinforced front clip webbing at the dog's chest to redirect dogs that pull on leash. (Reference: https://ruffwear.com/products/front-range-everyday-dog-harness)",
+      "price": 39.95,
       "itemDurability": "Medium",
-      "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 0,
-      "inStock": false
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1577/4333/products/30502-Front-Range-Harness-Twilight-Gray-Right_820x550.png?v=1651601285",
+      "inventoryCount": 10,
+      "inStock": true
     },
     {
       "id": 2,
-      "itemName": "product 2",
-      "description": "product description 2 - medium",
-      "price": 2.22,
-      "itemDurability": "Medium",
-      "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 2,
+      "itemName": "Bungee Dog Leash",
+      "description": "This is an adjustable stretch-webbing running dog leash that can be hand-held or worn around the waist for a dynamic hands-free leash experience. Wavelength™ stretch webbing keeps humans and canines connected while allowing an extended range for roaming and exploring.\n\nReference (https://ruffwear.com/products/roamer-bungee-dog-leash)\n\n",
+      "price": 39.95,
+      "itemDurability": "Tough",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1577/4333/products/40354-Roamer-Leash-Granite-Gray_820x550.png?v=1637779263",
+      "inventoryCount": 10,
       "inStock": true
     },
     {
       "id": 3,
-      "itemName": "product 3",
-      "description": "product description 3 - tough",
-      "price": 3.33,
-      "itemDurability": "Tough",
-      "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 3,
-      "inStock": true
+      "itemName": "Wide-Mouth Water Bottle",
+      "description": "Made with a revolutionary resin powered by new recycling technology that transforms plastic destined for landfills into high-performance BPA/BPS-free bottles. This material is derived from 50% waste plastic (using ISCC certified mass balance), further offsetting the use of fossil fuels and lowering greenhouse gas emissions. (Reference: https://nalgene.com/product/32oz-wide-mouth-sustain/)",
+      "price": 15.99,
+      "itemDurability": "Medium",
+      "imageUrl": "https://redoxx.vtexassets.com/arquivos/ids/160197/341816---Nalgene---Green-Glow-32oz---back.jpg?v=637376922352600000",
+      "inventoryCount": 0,
+      "inStock": false
     },
     {
-      "itemName": "product 4",
-      "description": "product description 4 - light",
-      "price": 4.44,
-      "itemDurability": "Light",
-      "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 0,
-      "inStock": false,
+      "itemName": "55L Long-Trek Backpack",
+      "description": "Delivering light weight and much-needed comfort, this long-trek pack features a breathable FreeFloat suspension with dynamic flex panels that follow the natural movements of your body. (Reference: https://www.rei.com/product/159409/gregory-maven-55-pack-womens)\n\n\n",
+      "price": 249.95,
+      "itemDurability": "Tough",
+      "imageUrl": "https://www.rei.com/media/040a918c-3079-49b7-a94b-a9f8354a8eac?size=784x588",
+      "inventoryCount": 5,
+      "inStock": true,
       "id": 4
     },
     {
       "id": 5,
-      "itemName": "TEST 5",
-      "description": "TEST description 5 - tough",
-      "price": 5.55,
-      "itemDurability": "Tough",
-      "imageUrl": "https://source.unsplash.com/random",
-      "inventoryCount": 55,
+      "itemName": "Collapsible Dog Bowl",
+      "description": "Fuel your adventures with the ultralight, durable, and collapsable dog bowl. Welded, single-wall construction keeps the bowl simple and clean. Engineered collapsibility makes it portable and ready to hit the trail. And, with a capacity of 60 fl oz (1.8L) at a weight of only 2.96 oz (84g), it holds plenty of food or water, putting it at the top of your fido's packing list for just about any trail ahead. (Reference: https://ruffwear.com/products/bivy-portable-dog-bowl)\n",
+      "price": 29.95,
+      "itemDurability": "Medium",
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1577/4333/products/20402-Bivy-Bowl-Blue-Spring-Open_820x550.png?v=1635010976",
+      "inventoryCount": 15,
       "inStock": true
     },
     {
       "id": 6,
-      "itemName": "TEST 7",
-      "description": "TEST 7",
-      "price": 7.77,
-      "imageUrl": "https://source.unsplash.com/random",
+      "itemName": "Expert Grip Dog Boots",
+      "description": "With these dog boots, those paws can go the distance thanks to the rugged and resilient Ruffwear-designed Vibram outsole with exceptional traction and protection on varied terrain. Breathable mesh upper provides ventilation, and the closure system combines hook-and-loop with hardware, cinching around the narrowest part of the dog’s leg to provide a secure fit. (Reference: https://ruffwear.com/products/grip-trex-dog-boot-pairs)\n\n",
+      "price": 39.95,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1577/4333/products/P15202-Grip-Trex-Boots-Lichen-Green-Paired-SMALL_820x550.png?v=1651524849",
+      "itemDurability": "Tough",
+      "inStock": false,
+      "inventoryCount": 0
+    },
+    {
+      "id": 8,
+      "itemName": "35-Degree Sleeping Bag",
+      "description": "Classic mummy-bag design isn't ideal for the 70% of people who sleep on their side. The this 35-degree sleeping bag adds room at the elbows and knees for 3-season, side-sleeping comfort.\n\n(Reference: https://www.rei.com/product/163033/nemo-forte-35-sleeping-bag-womens)",
+      "price": 169.95,
+      "imageUrl": "https://www.rei.com/media/1da0889c-dd2c-485e-9907-73bcc443ed13?size=784x588",
       "itemDurability": "Medium",
       "inStock": true,
-      "inventoryCount": 7
+      "inventoryCount": 8
+    },
+    {
+      "id": 9,
+      "itemName": "NEW! Camp Stove",
+      "description": "Enjoy cocoa, coffee or a gourmet freeze-dried meal in a jiffy with this new flash cooking system, which boils water in 100 seconds, allowing you to conserve fuel and dig in faster.\n\n(Reference: https://www.rei.com/product/127968/jetboil-flash-cooking-system)",
+      "price": 114.95,
+      "imageUrl": "https://www.rei.com/media/f6cdb011-565e-4912-8d81-de5a0f034e78?size=784x588",
+      "itemDurability": "Medium",
+      "inStock": true,
+      "inventoryCount": 2
+    },
+    {
+      "id": 10,
+      "itemName": "Head Lamp",
+      "description": "This simple yet versatile, 1-lens, 1-switch headlamp throws 300 lumens and can run on alkaline batteries (included) or a rechargeable lithium-ion battery (not included).\n\n(Reference: https://www.rei.com/product/202772/black-diamond-astro-300-headlamp)\n",
+      "price": 19.95,
+      "imageUrl": "https://www.rei.com/media/8aca387f-6f9d-43ef-8dd2-369f179fccaa?size=784x588",
+      "itemDurability": "Light",
+      "inStock": true,
+      "inventoryCount": 5
+    },
+    {
+      "id": 11,
+      "itemName": "Camp Cookware Set",
+      "description": "With everything you need to cook a satisfying meal outdoors, this 11-piece stainless-steel camp cookset nests together to save you space. (Reference: https://www.rei.com/product/161619/stanley-even-heat-camp-pro-cookset)\n\n\n",
+      "price": 150,
+      "imageUrl": "https://www.rei.com/media/d3c1905a-67f2-42b3-9090-0ba7482121f2?size=784x588",
+      "itemDurability": "Medium",
+      "inStock": true,
+      "inventoryCount": 12
+    },
+    {
+      "id": 12,
+      "itemName": "Emergency Rain Poncho",
+      "description": "Be prepared for fickle forecasts with this emergency poncho. Made with polyurethane-coated polyester, this just-in-case layer seals out water and easily stashes in your pack.\n(Reference: https://www.rei.com/product/163063/outdoor-products-multipurpose-poncho)\n\n",
+      "price": 32,
+      "imageUrl": "https://www.rei.com/media/2f2341c0-cb7e-4190-b235-fdcc74eed07b?size=576x768",
+      "itemDurability": "Light",
+      "inStock": false,
+      "inventoryCount": 0
+    },
+    {
+      "id": 13,
+      "itemName": "Dog Raincoat",
+      "description": "When the weather calls for rain, this waterproof shell is just the jacket for getting outside and exploring anyway. The fold-up storm collar and TailGate™ patterning offer extended coverage over the neck, rump, and thighs to keep dogs dry in wet conditions. Lightweight and non-insulated, the Sun Shower both excels as a standalone shell and layers well over an insulating mid-layer for rain management in colder temps.\n(Reference: https://ruffwear.com/products/sun-shower-dog-raincoat)",
+      "price": 59.95,
+      "imageUrl": "https://cdn.shopify.com/s/files/1/1577/4333/products/05303-Sun-Shower-Midnight-Blue-Right-Angle-SMALL_820x550.png?v=1636497894",
+      "itemDurability": "Light",
+      "inStock": false,
+      "inventoryCount": 0
     }
   ]
 }

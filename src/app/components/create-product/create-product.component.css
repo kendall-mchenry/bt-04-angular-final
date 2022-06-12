@@ -1,3 +1,7 @@
+h1 {
+  font-family: 'Roboto Slab', serif;
+}
+
 .inv-display {
   padding-left: 5px;
 }
@@ -19,6 +23,7 @@
 
 .inv-btn {
   margin: 8px;
+  background-color: #04395E;
 }
 
 .inv-div {
@@ -33,3 +38,7 @@
   margin-right: 20px;
 }
 
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-flex {
+  background-color: white;
+  border-radius: 5px;
+}

@@ -1,16 +1,20 @@
 <div class="div-wrapper">
-  <h1>
-    High quality outdoor and adventure gear for you and your canine companion
-  </h1>
-  <button class="add-btn" mat-raised-button [routerLink]="['/add']">Add New Product</button>
+
+  <div class="prod-header">
+    <h1>
+      High-quality outdoor and adventure gear for you and your canine companion!</h1>
+    <button class="add-btn" mat-raised-button [routerLink]="['/add']">Add New Product</button>
+  
+  </div>
+  <mat-divider></mat-divider>
 
   <div class="sort-container">
 
     <div class="search-div">
       <form #form="ngForm" (ngSubmit)="onSearchSubmit()">
         <mat-form-field appearance="outline">
-          <mat-label>Search Products</mat-label>
-          <input type="text" name="search" [(ngModel)]="searchTerm" matInput>
+          <mat-label >Search Products</mat-label>
+          <input type="text" name="search"  [(ngModel)]="searchTerm" matInput>
           <button type="submit" mat-icon-button mat-mini-fab matSuffix class="search-btn">
             <mat-icon>search</mat-icon>
           </button>
